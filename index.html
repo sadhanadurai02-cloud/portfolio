@@ -1,44 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
 <meta name="description" content="Sadhana Durai — Sales Development Representative in Toronto. Outbound prospecting, pipeline generation, and SaaS sales.">
 <title>Sadhana Durai — Sales Development Representative</title>
-<link rel="stylesheet" href="_ds/classical-bdb26778-0a80-4696-800f-ae4082a3e4ed/styles.css">
-<script src="_ds/classical-bdb26778-0a80-4696-800f-ae4082a3e4ed/_ds_bundle.js"></script>
-<style>
-  html { scroll-behavior: smooth; }
-  body { margin: 0; }
-  @keyframes slowspin { to { transform: rotate(360deg); } }
-  @keyframes driftA { 0%,100% { transform: translate(0,0); } 50% { transform: translate(38px,-26px); } }
-  @keyframes driftB { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-30px,22px); } }
-  @keyframes nudge { 0%,100% { transform: translateY(0); opacity:.55 } 50% { transform: translateY(7px); opacity:1 } }
-  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
-</style>
-</helmet>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
 
-<div style="background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);min-height:100vh;overflow-x:hidden;transition:background .45s ease,color .45s ease">
+<div style="background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);min-height:100vh">
 
   <header style="position:sticky;top:0;z-index:40;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:color-mix(in srgb, var(--color-bg) 78%, transparent);border-bottom:1px solid var(--color-divider)">
     <nav style="max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:28px;padding:14px 32px">
       <a href="#top" style="font-family:var(--font-heading);font-weight:600;font-size:19px;letter-spacing:-.01em;color:inherit;text-decoration:none;margin-right:auto">Sadhana&nbsp;Durai</a>
-      <div style="display:none;gap:26px;align-items:center;font-size:13.5px;letter-spacing:.01em" data-navlinks="1">
-        <a href="#numbers" style="color:inherit;text-decoration:none;opacity:.7" style-hover="opacity:1;color:var(--color-accent)">Results</a>
-        <a href="#journey" style="color:inherit;text-decoration:none;opacity:.7" style-hover="opacity:1;color:var(--color-accent)">Journey</a>
-        <a href="#toolkit" style="color:inherit;text-decoration:none;opacity:.7" style-hover="opacity:1;color:var(--color-accent)">Toolkit</a>
-        <a href="#process" style="color:inherit;text-decoration:none;opacity:.7" style-hover="opacity:1;color:var(--color-accent)">Process</a>
-        <a href="#connect" style="color:inherit;text-decoration:none;opacity:.7" style-hover="opacity:1;color:var(--color-accent)">Contact</a>
+      <div class="nav-links">
+        <a href="#numbers" class="nav-link">Results</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#toolkit" class="nav-link">Toolkit</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#connect" class="nav-link">Contact</a>
       </div>
-      <button type="button" onClick="{{ toggleTheme }}" aria-label="Toggle dark mode" style="width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--color-divider);border-radius:999px;background:transparent;color:var(--color-accent);cursor:pointer" style-hover="background:color-mix(in srgb, var(--color-accent) 12%, transparent)">
-        <span style="font-size:13px;line-height:1">{{ themeGlyph }}</span>
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode" style="width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--color-divider);border-radius:999px;background:transparent;color:var(--color-accent);cursor:pointer">
+        <span style="font-size:13px;line-height:1" data-theme-glyph>☀</span>
       </button>
-      <a class="btn btn-primary" href="assets/Sadhana-Durai-Resume.docx" download="" style="white-space:nowrap">Résumé</a>
+      <a class="btn btn-primary" href="assets/Sadhana-Durai-Resume.docx" download style="white-space:nowrap">Résumé</a>
     </nav>
   </header>
 
@@ -48,7 +35,7 @@
       <div style="position:absolute;top:-90px;right:-40px;width:380px;height:380px;border-radius:50%;border:1px solid color-mix(in srgb, var(--color-accent) 18%, transparent);animation:driftB 27s ease-in-out infinite"></div>
       <div style="position:absolute;left:-140px;bottom:-200px;width:440px;height:440px;border-radius:50%;border:1px dashed color-mix(in srgb, var(--color-text) 12%, transparent);animation:slowspin 90s linear infinite"></div>
     </div>
-    <div style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:64px;align-items:center" data-herogrid="1">
+    <div class="hero-grid" style="position:relative;max-width:1180px;margin:0 auto">
       <div>
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:26px">
           <span style="width:34px;height:1px;background:var(--color-accent)"></span>
@@ -57,7 +44,7 @@
         <h1 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(44px,6.4vw,82px);line-height:1.02;letter-spacing:-.025em;margin:0 0 28px">Building pipeline.<br>Creating opportunities.<br><em style="font-style:italic;color:var(--color-accent)">Driving revenue.</em></h1>
         <p style="max-width:56ch;font-size:17px;line-height:1.7;margin:0 0 34px;color:color-mix(in srgb, var(--color-text) 78%, transparent);text-wrap:pretty">Results-driven sales professional with 4+ years generating opportunities, handling objections, and building customer relationships through consultative conversations — now bringing that record into SaaS.</p>
         <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px">
-          <a class="btn btn-primary" href="assets/Sadhana-Durai-Resume.docx" download="" style="padding:11px 22px;font-size:15px">Download résumé</a>
+          <a class="btn btn-primary" href="assets/Sadhana-Durai-Resume.docx" download style="padding:11px 22px;font-size:15px">Download résumé</a>
           <a class="btn btn-secondary" href="https://www.linkedin.com/in/sadhanadurai" target="_blank" rel="noopener" style="padding:11px 22px;font-size:15px">LinkedIn</a>
           <a class="btn btn-secondary" href="mailto:sadhanadurai02@gmail.com" style="padding:11px 22px;font-size:15px">Email me</a>
         </div>
@@ -93,37 +80,37 @@
 
   <section id="numbers" style="padding:92px 32px;border-bottom:1px solid var(--color-divider)">
     <div style="max-width:1180px;margin:0 auto">
-      <div data-reveal="1" style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:44px">
+      <div data-reveal style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:44px">
         <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(30px,3.6vw,46px);letter-spacing:-.02em;margin:0">The performance record</h2>
         <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent)">Section 01</span>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--color-divider);border:1px solid var(--color-divider)">
-        <div data-reveal="1" style="background:var(--color-bg);padding:34px 28px;transition:background .3s ease" style-hover="background:color-mix(in srgb, var(--color-accent) 7%, transparent)">
+        <div data-reveal class="stat-cell" style="background:var(--color-bg);padding:34px 28px">
           <div style="font-family:var(--font-heading);font-weight:400;font-size:56px;line-height:1;letter-spacing:-.03em;font-feature-settings:'tnum'"><span data-count="70" data-suffix="+">70+</span></div>
           <div style="height:1px;background:var(--color-accent);width:38px;margin:16px 0"></div>
           <div style="font-size:13px;line-height:1.5;opacity:.75">Customer interactions handled daily at Bell</div>
         </div>
-        <div data-reveal="1" style="background:var(--color-bg);padding:34px 28px;transition:background .3s ease" style-hover="background:color-mix(in srgb, var(--color-accent) 7%, transparent)">
+        <div data-reveal class="stat-cell" style="background:var(--color-bg);padding:34px 28px">
           <div style="font-family:var(--font-heading);font-weight:400;font-size:56px;line-height:1;letter-spacing:-.03em;font-feature-settings:'tnum'"><span data-count="40" data-suffix="%">40%</span></div>
           <div style="height:1px;background:var(--color-accent);width:38px;margin:16px 0"></div>
           <div style="font-size:13px;line-height:1.5;opacity:.75">Call-to-meeting conversion rate on outbound</div>
         </div>
-        <div data-reveal="1" style="background:var(--color-bg);padding:34px 28px;transition:background .3s ease" style-hover="background:color-mix(in srgb, var(--color-accent) 7%, transparent)">
+        <div data-reveal class="stat-cell" style="background:var(--color-bg);padding:34px 28px">
           <div style="font-family:var(--font-heading);font-weight:400;font-size:56px;line-height:1;letter-spacing:-.03em;font-feature-settings:'tnum'"><span data-count="2" data-suffix="x">2x</span></div>
           <div style="height:1px;background:var(--color-accent);width:38px;margin:16px 0"></div>
           <div style="font-size:13px;line-height:1.5;opacity:.75">Bell ALL STAR award winner, 2024 and 2025</div>
         </div>
-        <div data-reveal="1" style="background:var(--color-bg);padding:34px 28px;transition:background .3s ease" style-hover="background:color-mix(in srgb, var(--color-accent) 7%, transparent)">
+        <div data-reveal class="stat-cell" style="background:var(--color-bg);padding:34px 28px">
           <div style="font-family:var(--font-heading);font-weight:400;font-size:56px;line-height:1;letter-spacing:-.03em;font-feature-settings:'tnum'"><span data-count="500" data-suffix="+">500+</span></div>
           <div style="height:1px;background:var(--color-accent);width:38px;margin:16px 0"></div>
           <div style="font-size:13px;line-height:1.5;opacity:.75">Customer relationships managed end to end</div>
         </div>
-        <div data-reveal="1" style="background:var(--color-bg);padding:34px 28px;transition:background .3s ease" style-hover="background:color-mix(in srgb, var(--color-accent) 7%, transparent)">
+        <div data-reveal class="stat-cell" style="background:var(--color-bg);padding:34px 28px">
           <div style="font-family:var(--font-heading);font-weight:400;font-size:56px;line-height:1;letter-spacing:-.03em;font-feature-settings:'tnum'"><span data-count="4" data-suffix="+">4+</span></div>
           <div style="height:1px;background:var(--color-accent);width:38px;margin:16px 0"></div>
           <div style="font-size:13px;line-height:1.5;opacity:.75">Years across BDR, sales, and operations roles</div>
         </div>
-        <div data-reveal="1" style="background:var(--color-bg);padding:34px 28px;transition:background .3s ease" style-hover="background:color-mix(in srgb, var(--color-accent) 7%, transparent)">
+        <div data-reveal class="stat-cell" style="background:var(--color-bg);padding:34px 28px">
           <div style="font-family:var(--font-heading);font-weight:400;font-size:38px;line-height:1.05;letter-spacing:-.02em;padding-top:12px">Top<br>performer</div>
           <div style="height:1px;background:var(--color-accent);width:38px;margin:16px 0"></div>
           <div style="font-size:13px;line-height:1.5;opacity:.75">Recognized in both 2024 and 2025</div>
@@ -134,27 +121,27 @@
 
   <section id="impact" style="padding:92px 32px;border-bottom:1px solid var(--color-divider)">
     <div style="max-width:1180px;margin:0 auto">
-      <div data-reveal="1" style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:44px">
+      <div data-reveal style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:44px">
         <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(30px,3.6vw,46px);letter-spacing:-.02em;margin:0">Sales impact</h2>
         <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent)">Section 02</span>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
-        <article data-reveal="1" class="card" style="padding:30px;gap:16px;transition:transform .35s cubic-bezier(.2,.7,.3,1),border-color .35s ease,box-shadow .35s ease" style-hover="transform:translateY(-6px);border-color:var(--color-accent);box-shadow:var(--shadow-md)">
+        <article data-reveal class="card impact-card" style="padding:30px;gap:16px">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
           <h3 style="font-family:var(--font-heading);font-weight:600;font-size:20px;margin:0">Bell ALL STAR Award</h3>
           <p style="margin:0;font-size:14px;line-height:1.65;opacity:.78">Recognized twice among top performers for sales results, customer experience, and operational excellence.</p>
         </article>
-        <article data-reveal="1" class="card" style="padding:30px;gap:16px;transition:transform .35s cubic-bezier(.2,.7,.3,1),border-color .35s ease,box-shadow .35s ease" style-hover="transform:translateY(-6px);border-color:var(--color-accent);box-shadow:var(--shadow-md)">
+        <article data-reveal class="card impact-card" style="padding:30px;gap:16px">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
           <h3 style="font-family:var(--font-heading);font-weight:600;font-size:20px;margin:0">Pipeline generation</h3>
           <p style="margin:0;font-size:14px;line-height:1.65;opacity:.78">Consistently uncovers new revenue through outbound outreach, referrals, and consultative discovery conversations.</p>
         </article>
-        <article data-reveal="1" class="card" style="padding:30px;gap:16px;transition:transform .35s cubic-bezier(.2,.7,.3,1),border-color .35s ease,box-shadow .35s ease" style-hover="transform:translateY(-6px);border-color:var(--color-accent);box-shadow:var(--shadow-md)">
+        <article data-reveal class="card impact-card" style="padding:30px;gap:16px">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
           <h3 style="font-family:var(--font-heading);font-weight:600;font-size:20px;margin:0">High-volume outreach</h3>
           <p style="margin:0;font-size:14px;line-height:1.65;opacity:.78">70+ daily customer conversations at Bell, 80+ daily prospecting calls at BYJU'S — without losing conversion quality.</p>
         </article>
-        <article data-reveal="1" class="card" style="padding:30px;gap:16px;transition:transform .35s cubic-bezier(.2,.7,.3,1),border-color .35s ease,box-shadow .35s ease" style-hover="transform:translateY(-6px);border-color:var(--color-accent);box-shadow:var(--shadow-md)">
+        <article data-reveal class="card impact-card" style="padding:30px;gap:16px">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
           <h3 style="font-family:var(--font-heading);font-weight:600;font-size:20px;margin:0">Customer experience</h3>
           <p style="margin:0;font-size:14px;line-height:1.65;opacity:.78">Holds service quality high while hitting sales objectives — the reason the ALL STAR recognition came twice.</p>
@@ -165,15 +152,15 @@
 
   <section id="journey" style="padding:92px 32px;border-bottom:1px solid var(--color-divider)">
     <div style="max-width:1180px;margin:0 auto">
-      <div data-reveal="1" style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:52px">
+      <div data-reveal style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:52px">
         <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(30px,3.6vw,46px);letter-spacing:-.02em;margin:0">Professional journey</h2>
         <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent)">Section 03</span>
       </div>
       <div style="position:relative;padding-left:38px;border-left:1px solid var(--color-divider);display:flex;flex-direction:column;gap:8px">
 
-        <div data-reveal="1" style="position:relative;padding:0 0 34px">
+        <div data-reveal style="position:relative;padding:0 0 34px">
           <span style="position:absolute;left:-45px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--color-accent);box-shadow:0 0 0 5px var(--color-bg)"></span>
-          <button type="button" onClick="{{ toggle0 }}" aria-expanded="{{ open0 }}" style="width:100%;text-align:left;background:transparent;border:0;padding:0;cursor:pointer;color:inherit;font-family:inherit">
+          <button type="button" data-role-toggle aria-controls="role-0-details" aria-expanded="true" style="width:100%;text-align:left;background:transparent;border:0;padding:0;cursor:pointer;color:inherit;font-family:inherit">
             <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:12px">
               <span class="tag tag-outline" style="font-feature-settings:'tnum'">2024 — Present</span>
               <span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent)">Current role</span>
@@ -181,56 +168,50 @@
             <h3 style="font-family:var(--font-heading);font-weight:600;font-size:26px;margin:12px 0 4px">Sales Specialist — Business Development</h3>
             <div style="font-style:italic;font-size:15px;opacity:.7">NQX, on behalf of Bell Canada · Toronto</div>
           </button>
-          <sc-if value="{{ open0 }}" hint-placeholder-val="{{ true }}">
-            <ul style="margin:18px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:9px;font-size:14.5px;line-height:1.6;opacity:.82;max-width:70ch">
-              <li>2x Bell ALL STAR top-performer recognition (2024, 2025) for sales results, customer experience, and operational performance.</li>
-              <li>Handles 70+ customer interactions daily using discovery questions, objection handling, and consultative selling.</li>
-              <li>Builds pipeline through outbound outreach, follow-up calls, referrals, and customer engagement.</li>
-              <li>Qualifies prospects on business need, pain, timeline, and decision-making before recommending solutions.</li>
-              <li>Maintains accurate Salesforce records, activity tracking, and follow-up tasks for pipeline reporting.</li>
-            </ul>
-          </sc-if>
+          <ul id="role-0-details" class="role-details">
+            <li>2x Bell ALL STAR top-performer recognition (2024, 2025) for sales results, customer experience, and operational performance.</li>
+            <li>Handles 70+ customer interactions daily using discovery questions, objection handling, and consultative selling.</li>
+            <li>Builds pipeline through outbound outreach, follow-up calls, referrals, and customer engagement.</li>
+            <li>Qualifies prospects on business need, pain, timeline, and decision-making before recommending solutions.</li>
+            <li>Maintains accurate Salesforce records, activity tracking, and follow-up tasks for pipeline reporting.</li>
+          </ul>
         </div>
 
-        <div data-reveal="1" style="position:relative;padding:0 0 34px">
+        <div data-reveal style="position:relative;padding:0 0 34px">
           <span style="position:absolute;left:-45px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--color-bg);border:1px solid var(--color-accent);box-shadow:0 0 0 5px var(--color-bg)"></span>
-          <button type="button" onClick="{{ toggle1 }}" aria-expanded="{{ open1 }}" style="width:100%;text-align:left;background:transparent;border:0;padding:0;cursor:pointer;color:inherit;font-family:inherit">
+          <button type="button" data-role-toggle aria-controls="role-1-details" aria-expanded="false" style="width:100%;text-align:left;background:transparent;border:0;padding:0;cursor:pointer;color:inherit;font-family:inherit">
             <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:12px">
               <span class="tag tag-outline" style="font-feature-settings:'tnum'">2019 — 2021</span>
             </div>
             <h3 style="font-family:var(--font-heading);font-weight:600;font-size:26px;margin:12px 0 4px">Business Development Representative</h3>
             <div style="font-style:italic;font-size:15px;opacity:.7">BYJU'S · Lead generation &amp; pipeline development</div>
           </button>
-          <sc-if value="{{ open1 }}" hint-placeholder-val="{{ true }}">
-            <ul style="margin:18px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:9px;font-size:14.5px;line-height:1.6;opacity:.82;max-width:70ch">
-              <li>Executed 80+ daily outbound prospecting calls, achieving a 40% call-to-meeting conversion rate.</li>
-              <li>Ranked in the top 5% of business development associates for target attainment and opportunity generation.</li>
-              <li>Ran account research and personalized outreach to engage decision-makers and lift response rates.</li>
-              <li>Led discovery conversations on need, pain, timeline, and buying intent before advancing opportunities.</li>
-              <li>Managed the end-to-end cycle from prospecting through objection handling and closing activities.</li>
-            </ul>
-          </sc-if>
+          <ul id="role-1-details" class="role-details" hidden>
+            <li>Executed 80+ daily outbound prospecting calls, achieving a 40% call-to-meeting conversion rate.</li>
+            <li>Ranked in the top 5% of business development associates for target attainment and opportunity generation.</li>
+            <li>Ran account research and personalized outreach to engage decision-makers and lift response rates.</li>
+            <li>Led discovery conversations on need, pain, timeline, and buying intent before advancing opportunities.</li>
+            <li>Managed the end-to-end cycle from prospecting through objection handling and closing activities.</li>
+          </ul>
         </div>
 
-        <div data-reveal="1" style="position:relative;padding:0 0 34px">
+        <div data-reveal style="position:relative;padding:0 0 34px">
           <span style="position:absolute;left:-45px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--color-bg);border:1px solid var(--color-divider);box-shadow:0 0 0 5px var(--color-bg)"></span>
-          <button type="button" onClick="{{ toggle2 }}" aria-expanded="{{ open2 }}" style="width:100%;text-align:left;background:transparent;border:0;padding:0;cursor:pointer;color:inherit;font-family:inherit">
+          <button type="button" data-role-toggle aria-controls="role-2-details" aria-expanded="false" style="width:100%;text-align:left;background:transparent;border:0;padding:0;cursor:pointer;color:inherit;font-family:inherit">
             <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:12px">
               <span class="tag tag-outline" style="font-feature-settings:'tnum'">2018 — 2019</span>
             </div>
             <h3 style="font-family:var(--font-heading);font-weight:600;font-size:26px;margin:12px 0 4px">Operations Coordinator</h3>
             <div style="font-style:italic;font-size:15px;opacity:.7">Kerry Logistics</div>
           </button>
-          <sc-if value="{{ open2 }}" hint-placeholder-val="{{ true }}">
-            <ul style="margin:18px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:9px;font-size:14.5px;line-height:1.6;opacity:.82;max-width:70ch">
-              <li>Coordinated stakeholder communication across vendors, customers, and internal teams to support delivery.</li>
-              <li>Managed inquiries, scheduling logistics, and operational escalations while holding relationships steady.</li>
-              <li>Translated operational complexity into clear status reports and actionable insight for leadership.</li>
-            </ul>
-          </sc-if>
+          <ul id="role-2-details" class="role-details" hidden>
+            <li>Coordinated stakeholder communication across vendors, customers, and internal teams to support delivery.</li>
+            <li>Managed inquiries, scheduling logistics, and operational escalations while holding relationships steady.</li>
+            <li>Translated operational complexity into clear status reports and actionable insight for leadership.</li>
+          </ul>
         </div>
 
-        <div data-reveal="1" style="position:relative">
+        <div data-reveal style="position:relative">
           <span style="position:absolute;left:-45px;top:6px;width:13px;height:13px;border-radius:50%;background:transparent;border:1px dashed var(--color-accent);box-shadow:0 0 0 5px var(--color-bg)"></span>
           <div style="border:1px solid var(--color-accent);border-radius:var(--radius-md);padding:26px 28px;background:color-mix(in srgb, var(--color-accent) 6%, transparent)">
             <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent);margin-bottom:10px">Next</div>
@@ -245,57 +226,57 @@
 
   <section id="toolkit" style="padding:92px 32px;border-bottom:1px solid var(--color-divider)">
     <div style="max-width:1180px;margin:0 auto">
-      <div data-reveal="1" style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:44px">
+      <div data-reveal style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:44px">
         <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(30px,3.6vw,46px);letter-spacing:-.02em;margin:0">The sales toolkit</h2>
         <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent)">Section 04</span>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:44px">
-        <div data-reveal="1">
+        <div data-reveal>
           <h4 style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 18px;padding-bottom:10px;border-bottom:1px solid var(--color-divider)">CRM</h4>
           <div style="display:flex;flex-wrap:wrap;gap:9px">
-            <span class="tag tag-neutral" style="padding:7px 14px;font-size:13px;border:1px solid transparent;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent-800)">Salesforce</span>
-            <span class="tag tag-neutral" style="padding:7px 14px;font-size:13px;border:1px solid transparent;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent-800)">HubSpot</span>
+            <span class="tag tag-neutral toolkit-tag" style="padding:7px 14px;font-size:13px">Salesforce</span>
+            <span class="tag tag-neutral toolkit-tag" style="padding:7px 14px;font-size:13px">HubSpot</span>
           </div>
         </div>
-        <div data-reveal="1">
+        <div data-reveal>
           <h4 style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 18px;padding-bottom:10px;border-bottom:1px solid var(--color-divider)">Prospecting</h4>
           <div style="display:flex;flex-wrap:wrap;gap:9px">
-            <span class="tag tag-neutral" style="padding:7px 14px;font-size:13px;border:1px solid transparent;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent-800)">LinkedIn Sales Navigator</span>
-            <span class="tag tag-neutral" style="padding:7px 14px;font-size:13px;border:1px solid transparent;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent-800)">Apollo.io</span>
-            <span class="tag tag-neutral" style="padding:7px 14px;font-size:13px;border:1px solid transparent;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent-800)">Salesloft</span>
-            <span class="tag tag-neutral" style="padding:7px 14px;font-size:13px;border:1px solid transparent;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent-800)">ZoomInfo</span>
+            <span class="tag tag-neutral toolkit-tag" style="padding:7px 14px;font-size:13px">LinkedIn Sales Navigator</span>
+            <span class="tag tag-neutral toolkit-tag" style="padding:7px 14px;font-size:13px">Apollo.io</span>
+            <span class="tag tag-neutral toolkit-tag" style="padding:7px 14px;font-size:13px">Salesloft</span>
+            <span class="tag tag-neutral toolkit-tag" style="padding:7px 14px;font-size:13px">ZoomInfo</span>
           </div>
         </div>
-        <div data-reveal="1">
+        <div data-reveal>
           <h4 style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 18px;padding-bottom:10px;border-bottom:1px solid var(--color-divider)">Methodologies</h4>
           <div style="display:flex;flex-wrap:wrap;gap:9px">
-            <span class="tag tag-neutral" style="padding:7px 14px;font-size:13px;border:1px solid transparent;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent-800)">MEDDPICC</span>
-            <span class="tag tag-neutral" style="padding:7px 14px;font-size:13px;border:1px solid transparent;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent-800)">BANT</span>
-            <span class="tag tag-neutral" style="padding:7px 14px;font-size:13px;border:1px solid transparent;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent-800)">SPIN Selling</span>
-            <span class="tag tag-neutral" style="padding:7px 14px;font-size:13px;border:1px solid transparent;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent-800)">Challenger Sale</span>
+            <span class="tag tag-neutral toolkit-tag" style="padding:7px 14px;font-size:13px">MEDDPICC</span>
+            <span class="tag tag-neutral toolkit-tag" style="padding:7px 14px;font-size:13px">BANT</span>
+            <span class="tag tag-neutral toolkit-tag" style="padding:7px 14px;font-size:13px">SPIN Selling</span>
+            <span class="tag tag-neutral toolkit-tag" style="padding:7px 14px;font-size:13px">Challenger Sale</span>
           </div>
         </div>
       </div>
-      <div data-reveal="1" style="margin-top:52px">
+      <div data-reveal style="margin-top:52px">
         <h4 style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 22px;padding-bottom:10px;border-bottom:1px solid var(--color-divider)">Certifications &amp; training</h4>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
-          <div style="border:1px solid var(--color-divider);border-radius:var(--radius-md);padding:20px 22px;display:flex;align-items:center;gap:14px;transition:all .35s ease" style-hover="border-color:var(--color-accent);transform:translateY(-4px)">
+          <div class="cert-card" style="border:1px solid var(--color-divider);border-radius:var(--radius-md);padding:20px 22px;display:flex;align-items:center;gap:14px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
             <span style="font-size:14px;line-height:1.35">HubSpot Sales Software</span>
           </div>
-          <div style="border:1px solid var(--color-divider);border-radius:var(--radius-md);padding:20px 22px;display:flex;align-items:center;gap:14px;transition:all .35s ease" style-hover="border-color:var(--color-accent);transform:translateY(-4px)">
+          <div class="cert-card" style="border:1px solid var(--color-divider);border-radius:var(--radius-md);padding:20px 22px;display:flex;align-items:center;gap:14px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
             <span style="font-size:14px;line-height:1.35">Salesforce Trailhead — CRM &amp; Sales Fundamentals</span>
           </div>
-          <div style="border:1px solid var(--color-divider);border-radius:var(--radius-md);padding:20px 22px;display:flex;align-items:center;gap:14px;transition:all .35s ease" style-hover="border-color:var(--color-accent);transform:translateY(-4px)">
+          <div class="cert-card" style="border:1px solid var(--color-divider);border-radius:var(--radius-md);padding:20px 22px;display:flex;align-items:center;gap:14px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
             <span style="font-size:14px;line-height:1.35">MEDDPICC Sales Framework</span>
           </div>
-          <div style="border:1px solid var(--color-divider);border-radius:var(--radius-md);padding:20px 22px;display:flex;align-items:center;gap:14px;transition:all .35s ease" style-hover="border-color:var(--color-accent);transform:translateY(-4px)">
+          <div class="cert-card" style="border:1px solid var(--color-divider);border-radius:var(--radius-md);padding:20px 22px;display:flex;align-items:center;gap:14px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
             <span style="font-size:14px;line-height:1.35">B2B Sales Strategy &amp; Consultative Selling</span>
           </div>
-          <div style="border:1px solid var(--color-divider);border-radius:var(--radius-md);padding:20px 22px;display:flex;align-items:center;gap:14px;transition:all .35s ease" style-hover="border-color:var(--color-accent);transform:translateY(-4px)">
+          <div class="cert-card" style="border:1px solid var(--color-divider);border-radius:var(--radius-md);padding:20px 22px;display:flex;align-items:center;gap:14px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
             <span style="font-size:14px;line-height:1.35">Google Search Ads 360</span>
           </div>
@@ -306,7 +287,7 @@
 
   <section id="why" style="padding:96px 32px;border-bottom:1px solid var(--color-divider);background:var(--color-surface);transition:background .45s ease">
     <div style="max-width:1180px;margin:0 auto">
-      <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:64px;align-items:start">
+      <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:64px;align-items:start">
         <div>
           <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent)">Section 05</span>
           <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(32px,4.4vw,58px);letter-spacing:-.025em;line-height:1.05;margin:18px 0 0">Why I'm betting<br>on <em style="font-style:italic;color:var(--color-accent)">SaaS</em></h2>
@@ -318,7 +299,7 @@
           <p>Predictable revenue is built one qualified conversation at a time, and I want to build it inside a team that measures it that way. First as an SDR who fills the top of the funnel with genuine opportunity. Then as an AE who carries those conversations to close. Long term, as an Enterprise AE selling into the accounts where the diagnosis matters most.</p>
         </div>
       </div>
-      <div data-reveal="1" style="margin-top:64px;padding-top:44px;border-top:1px solid var(--color-divider)">
+      <div data-reveal style="margin-top:64px;padding-top:44px;border-top:1px solid var(--color-divider)">
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;align-items:stretch">
           <div style="padding:26px 28px;border:1px solid var(--color-accent);border-radius:var(--radius-md);background:color-mix(in srgb, var(--color-accent) 8%, transparent)">
             <div style="font-family:var(--font-heading);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent);margin-bottom:10px">Now</div>
@@ -348,26 +329,26 @@
 
   <section id="awards" style="padding:92px 32px;border-bottom:1px solid var(--color-divider)">
     <div style="max-width:1180px;margin:0 auto">
-      <div data-reveal="1" style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:44px">
+      <div data-reveal style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:44px">
         <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(30px,3.6vw,46px);letter-spacing:-.02em;margin:0">Awards &amp; recognition</h2>
         <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent)">Section 06</span>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px">
-        <div data-reveal="1" style="position:relative;overflow:hidden;border:1px solid var(--color-accent);border-radius:var(--radius-md);padding:44px 40px;text-align:center;transition:box-shadow .4s ease,transform .4s cubic-bezier(.2,.7,.3,1)" style-hover="box-shadow:var(--shadow-md);transform:translateY(-5px)">
+        <div data-reveal class="award-card" style="position:relative;overflow:hidden;border:1px solid var(--color-accent);border-radius:var(--radius-md);padding:44px 40px;text-align:center">
           <div aria-hidden="true" style="position:absolute;inset:9px;border:1px solid color-mix(in srgb, var(--color-accent) 35%, transparent);border-radius:2px;pointer-events:none"></div>
           <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 20px"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
           <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--color-accent);margin-bottom:12px">Bell ALL STAR</div>
           <div style="font-family:var(--font-heading);font-weight:400;font-size:64px;line-height:1;letter-spacing:-.02em;font-feature-settings:'tnum'">2024</div>
           <p style="margin:16px auto 0;max-width:34ch;font-size:13.5px;line-height:1.6;opacity:.75">Top-performer recognition for sales results, customer experience, and operational performance.</p>
         </div>
-        <div data-reveal="1" style="position:relative;overflow:hidden;border:1px solid var(--color-accent);border-radius:var(--radius-md);padding:44px 40px;text-align:center;transition:box-shadow .4s ease,transform .4s cubic-bezier(.2,.7,.3,1)" style-hover="box-shadow:var(--shadow-md);transform:translateY(-5px)">
+        <div data-reveal class="award-card" style="position:relative;overflow:hidden;border:1px solid var(--color-accent);border-radius:var(--radius-md);padding:44px 40px;text-align:center">
           <div aria-hidden="true" style="position:absolute;inset:9px;border:1px solid color-mix(in srgb, var(--color-accent) 35%, transparent);border-radius:2px;pointer-events:none"></div>
           <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 20px"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
           <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--color-accent);margin-bottom:12px">Bell ALL STAR</div>
           <div style="font-family:var(--font-heading);font-weight:400;font-size:64px;line-height:1;letter-spacing:-.02em;font-feature-settings:'tnum'">2025</div>
           <p style="margin:16px auto 0;max-width:34ch;font-size:13.5px;line-height:1.6;opacity:.75">Repeat recognition — sustained performance across a second consecutive year.</p>
         </div>
-        <div data-reveal="1" style="border:1px solid var(--color-divider);border-radius:var(--radius-md);padding:44px 40px;text-align:center;transition:border-color .4s ease,transform .4s cubic-bezier(.2,.7,.3,1)" style-hover="border-color:var(--color-accent);transform:translateY(-5px)">
+        <div data-reveal class="award-card-outline" style="border:1px solid var(--color-divider);border-radius:var(--radius-md);padding:44px 40px;text-align:center">
           <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 20px"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>
           <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--color-accent);margin-bottom:12px">BYJU'S</div>
           <div style="font-family:var(--font-heading);font-weight:400;font-size:64px;line-height:1;letter-spacing:-.02em;font-feature-settings:'tnum'">Top 5%</div>
@@ -379,7 +360,7 @@
 
   <section id="process" style="padding:92px 32px;border-bottom:1px solid var(--color-divider)">
     <div style="max-width:1180px;margin:0 auto">
-      <div data-reveal="1" style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:44px">
+      <div data-reveal style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:44px">
         <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(30px,3.6vw,46px);letter-spacing:-.02em;margin:0">My sales process</h2>
         <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent)">Section 07</span>
       </div>
@@ -390,20 +371,20 @@
           <div style="position:absolute;inset:30%;border-radius:50%;display:grid;place-items:center;text-align:center;padding:8px">
             <div>
               <div style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--color-accent);margin-bottom:6px">Stage</div>
-              <div style="font-family:var(--font-heading);font-size:clamp(18px,2.4vw,26px);line-height:1.15">{{ stageName }}</div>
-              <div style="font-size:11.5px;line-height:1.5;opacity:.7;margin-top:8px;max-width:20ch;margin-inline:auto">{{ stageNote }}</div>
+              <div style="font-family:var(--font-heading);font-size:clamp(18px,2.4vw,26px);line-height:1.15" data-stage-name>Research</div>
+              <div style="font-size:11.5px;line-height:1.5;opacity:.7;margin-top:8px;max-width:20ch;margin-inline:auto" data-stage-note>Why this account, why now</div>
             </div>
           </div>
-          <button type="button" onMouseEnter="{{ hover0 }}" onFocus="{{ hover0 }}" onClick="{{ hover0 }}" style="position:absolute;left:50%;top:8%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent)">Research</button>
-          <button type="button" onMouseEnter="{{ hover1 }}" onFocus="{{ hover1 }}" onClick="{{ hover1 }}" style="position:absolute;left:79.7%;top:20.3%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent)">Prospect</button>
-          <button type="button" onMouseEnter="{{ hover2 }}" onFocus="{{ hover2 }}" onClick="{{ hover2 }}" style="position:absolute;left:92%;top:50%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent)">Personalize</button>
-          <button type="button" onMouseEnter="{{ hover3 }}" onFocus="{{ hover3 }}" onClick="{{ hover3 }}" style="position:absolute;left:79.7%;top:79.7%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent)">Engage</button>
-          <button type="button" onMouseEnter="{{ hover4 }}" onFocus="{{ hover4 }}" onClick="{{ hover4 }}" style="position:absolute;left:50%;top:92%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent)">Discover</button>
-          <button type="button" onMouseEnter="{{ hover5 }}" onFocus="{{ hover5 }}" onClick="{{ hover5 }}" style="position:absolute;left:20.3%;top:79.7%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent)">Qualify</button>
-          <button type="button" onMouseEnter="{{ hover6 }}" onFocus="{{ hover6 }}" onClick="{{ hover6 }}" style="position:absolute;left:8%;top:50%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent)">Book meeting</button>
-          <button type="button" onMouseEnter="{{ hover7 }}" onFocus="{{ hover7 }}" onClick="{{ hover7 }}" style="position:absolute;left:20.3%;top:20.3%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap;transition:all .3s ease" style-hover="border-color:var(--color-accent);color:var(--color-accent)">Create opportunity</button>
+          <button type="button" data-process-node data-stage-index="0" class="process-node" style="position:absolute;left:50%;top:8%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap">Research</button>
+          <button type="button" data-process-node data-stage-index="1" class="process-node" style="position:absolute;left:79.7%;top:20.3%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap">Prospect</button>
+          <button type="button" data-process-node data-stage-index="2" class="process-node" style="position:absolute;left:92%;top:50%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap">Personalize</button>
+          <button type="button" data-process-node data-stage-index="3" class="process-node" style="position:absolute;left:79.7%;top:79.7%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap">Engage</button>
+          <button type="button" data-process-node data-stage-index="4" class="process-node" style="position:absolute;left:50%;top:92%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap">Discover</button>
+          <button type="button" data-process-node data-stage-index="5" class="process-node" style="position:absolute;left:20.3%;top:79.7%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap">Qualify</button>
+          <button type="button" data-process-node data-stage-index="6" class="process-node" style="position:absolute;left:8%;top:50%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap">Book meeting</button>
+          <button type="button" data-process-node data-stage-index="7" class="process-node" style="position:absolute;left:20.3%;top:20.3%;transform:translate(-50%,-50%);border:1px solid var(--color-divider);border-radius:999px;background:var(--color-bg);padding:8px 15px;font-family:var(--font-heading);font-size:13.5px;color:inherit;cursor:pointer;white-space:nowrap">Create opportunity</button>
         </div>
-        <div data-reveal="1">
+        <div data-reveal>
           <p style="font-size:15.5px;line-height:1.75;text-align:justify;hyphens:auto;opacity:.85;max-width:52ch">The cycle does not start with the call. It starts with knowing why this account, this person, this week. Research earns the right to reach out; personalization earns the reply; discovery earns the meeting. Qualification is where discipline pays — a meeting booked on a weak signal costs an AE more than no meeting at all.</p>
           <p style="font-size:15.5px;line-height:1.75;text-align:justify;hyphens:auto;opacity:.85;max-width:52ch">Every stage gets logged. Clean CRM records are what turn eight good conversations into a forecast.</p>
           <div style="margin-top:26px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.55">Hover or tap a stage</div>
@@ -414,29 +395,29 @@
 
   <section id="chart" style="padding:92px 32px;border-bottom:1px solid var(--color-divider)">
     <div style="max-width:1180px;margin:0 auto">
-      <div data-reveal="1" style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:44px">
+      <div data-reveal style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:44px">
         <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(30px,3.6vw,46px);letter-spacing:-.02em;margin:0">Numbers that matter</h2>
         <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent)">Section 08</span>
       </div>
-      <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;align-items:center">
+      <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;align-items:center">
         <div>
           <h4 style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 24px;padding-bottom:10px;border-bottom:1px solid var(--color-divider)">Daily activity volume</h4>
           <div style="display:flex;flex-direction:column;gap:22px">
             <div>
               <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:7px;font-feature-settings:'tnum'"><span>Outbound prospecting calls · BYJU'S</span><span style="color:var(--color-accent)">80+</span></div>
-              <div style="height:8px;border:1px solid var(--color-divider);border-radius:2px;overflow:hidden"><div data-bar="100" style="height:100%;width:0;background:color-mix(in srgb, var(--color-accent) 55%, transparent);transition:width 1.4s cubic-bezier(.2,.8,.2,1)"></div></div>
+              <div style="height:8px;border:1px solid var(--color-divider);border-radius:2px;overflow:hidden"><div data-bar="100" style="height:100%;background:color-mix(in srgb, var(--color-accent) 55%, transparent)"></div></div>
             </div>
             <div>
               <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:7px;font-feature-settings:'tnum'"><span>Customer interactions · Bell</span><span style="color:var(--color-accent)">70+</span></div>
-              <div style="height:8px;border:1px solid var(--color-divider);border-radius:2px;overflow:hidden"><div data-bar="87" style="height:100%;width:0;background:color-mix(in srgb, var(--color-accent) 55%, transparent);transition:width 1.4s cubic-bezier(.2,.8,.2,1)"></div></div>
+              <div style="height:8px;border:1px solid var(--color-divider);border-radius:2px;overflow:hidden"><div data-bar="87" style="height:100%;background:color-mix(in srgb, var(--color-accent) 55%, transparent)"></div></div>
             </div>
             <div>
               <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:7px;font-feature-settings:'tnum'"><span>Call-to-meeting conversion</span><span style="color:var(--color-accent)">40%</span></div>
-              <div style="height:8px;border:1px solid var(--color-divider);border-radius:2px;overflow:hidden"><div data-bar="40" style="height:100%;width:0;background:var(--color-accent);transition:width 1.4s cubic-bezier(.2,.8,.2,1)"></div></div>
+              <div style="height:8px;border:1px solid var(--color-divider);border-radius:2px;overflow:hidden"><div data-bar="40" style="height:100%;background:var(--color-accent)"></div></div>
             </div>
             <div>
               <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:7px;font-feature-settings:'tnum'"><span>Peer ranking · BYJU'S</span><span style="color:var(--color-accent)">Top 5%</span></div>
-              <div style="height:8px;border:1px solid var(--color-divider);border-radius:2px;overflow:hidden"><div data-bar="95" style="height:100%;width:0;background:color-mix(in srgb, var(--color-accent) 55%, transparent);transition:width 1.4s cubic-bezier(.2,.8,.2,1)"></div></div>
+              <div style="height:8px;border:1px solid var(--color-divider);border-radius:2px;overflow:hidden"><div data-bar="95" style="height:100%;background:color-mix(in srgb, var(--color-accent) 55%, transparent)"></div></div>
             </div>
           </div>
         </div>
@@ -463,9 +444,9 @@
   </section>
 
   <section id="mission" style="padding:120px 32px;border-bottom:1px solid var(--color-divider);background:var(--color-surface);transition:background .45s ease">
-    <div data-reveal="1" style="max-width:1000px;margin:0 auto;text-align:center">
+    <div data-reveal style="max-width:1000px;margin:0 auto;text-align:center">
       <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--color-accent);margin-bottom:34px">Mission</div>
-      <blockquote style="margin:0;font-family:var(--font-heading);font-weight:400;font-size:clamp(28px,4.2vw,54px);line-height:1.18;letter-spacing:-.02em;text-wrap:pretty">“My mission is to help companies grow by creating meaningful conversations, uncovering customer challenges, and connecting solutions to <em style="font-style:italic;color:var(--color-accent)">business outcomes</em>.”</blockquote>
+      <blockquote style="margin:0;font-family:var(--font-heading);font-weight:400;font-size:clamp(28px,4.2vw,54px);line-height:1.18;letter-spacing:-.02em;text-wrap:pretty">&ldquo;My mission is to help companies grow by creating meaningful conversations, uncovering customer challenges, and connecting solutions to <em style="font-style:italic;color:var(--color-accent)">business outcomes</em>.&rdquo;</blockquote>
       <div style="width:60px;height:1px;background:var(--color-accent);margin:38px auto 0"></div>
       <div style="margin-top:20px;font-style:italic;font-size:15px;opacity:.7">Sadhana Durai · Toronto, Ontario</div>
     </div>
@@ -476,11 +457,11 @@
       <div style="position:absolute;left:50%;top:50%;width:660px;height:660px;margin:-330px 0 0 -330px;border-radius:50%;border:1px dashed color-mix(in srgb, var(--color-accent) 22%, transparent);animation:slowspin 120s linear infinite"></div>
       <div style="position:absolute;left:50%;top:50%;width:440px;height:440px;margin:-220px 0 0 -220px;border-radius:50%;border:1px solid color-mix(in srgb, var(--color-accent) 16%, transparent)"></div>
     </div>
-    <div data-reveal="1" style="position:relative;max-width:820px;margin:0 auto;text-align:center">
+    <div data-reveal style="position:relative;max-width:820px;margin:0 auto;text-align:center">
       <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(34px,5vw,64px);letter-spacing:-.025em;line-height:1.06;margin:0 0 22px">Looking for your next<br>SDR or BDR?</h2>
       <p style="font-size:16.5px;line-height:1.7;opacity:.78;margin:0 auto 38px;max-width:52ch">I am based in Toronto, ready to start, and happy to walk through my call recordings, discovery approach, and pipeline numbers.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
-        <a class="btn btn-primary" href="assets/Sadhana-Durai-Resume.docx" download="" style="padding:12px 26px;font-size:15px">Download résumé</a>
+        <a class="btn btn-primary" href="assets/Sadhana-Durai-Resume.docx" download style="padding:12px 26px;font-size:15px">Download résumé</a>
         <a class="btn btn-secondary" href="https://www.linkedin.com/in/sadhanadurai" target="_blank" rel="noopener" style="padding:12px 26px;font-size:15px">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
           LinkedIn
@@ -502,172 +483,6 @@
 
 </div>
 
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;startDark&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Appearance&quot;},&quot;expandAllRoles&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
-const STAGES = [
-  ['Research', 'Why this account, why now'],
-  ['Prospect', 'Find the right person, not any person'],
-  ['Personalize', 'One relevant line beats ten generic ones'],
-  ['Engage', 'Call, email, LinkedIn — in sequence'],
-  ['Discover', 'Questions before pitches'],
-  ['Qualify', 'Need, pain, timeline, decision path'],
-  ['Book meeting', 'A calendar hold with a stated agenda'],
-  ['Create opportunity', 'Clean handoff, clean CRM record']
-];
-
-const DARK = {
-  '--color-bg': '#16150f',
-  '--color-surface': '#1e1d16',
-  '--color-text': '#ece6da',
-  '--color-accent': '#d5a45f',
-  '--color-divider': 'color-mix(in srgb, #ece6da 18%, transparent)',
-  '--color-neutral-100': '#2a2822',
-  '--color-neutral-800': '#e2dbcd',
-  '--color-accent-100': 'rgba(213,164,95,0.14)',
-  '--color-accent-800': '#e9c58a',
-  '--color-accent-2-100': 'rgba(213,164,95,0.14)',
-  '--color-accent-2-800': '#e9c58a',
-  '--shadow-sm': '0 1px 2px rgba(0,0,0,0.5)',
-  '--shadow-md': '0 3px 12px rgba(0,0,0,0.55)',
-  '--shadow-lg': '0 12px 34px rgba(0,0,0,0.6)'
-};
-
-class Component extends DCLogic {
-  state = { dark: false, open: { 0: true }, stage: 0 };
-
-  componentDidMount() {
-    let dark = this.props.startDark ?? false;
-    try {
-      const saved = localStorage.getItem('sd-portfolio-theme');
-      if (saved === 'dark') dark = true;
-      else if (saved === 'light') dark = false;
-    } catch (e) {}
-    const openAll = this.props.expandAllRoles ?? false;
-    this.setState({ dark, open: openAll ? { 0: true, 1: true, 2: true } : { 0: true } }, () => this.applyTheme());
-    this.applyTheme(dark);
-    this.setupReveal();
-    this.setupNav();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.dark !== this.state.dark) this.applyTheme();
-  }
-
-  componentWillUnmount() {
-    if (this._io) this._io.disconnect();
-    if (this._mq) this._mq.removeEventListener('change', this._onMq);
-  }
-
-  applyTheme(force) {
-    const dark = force === undefined ? this.state.dark : force;
-    const root = document.documentElement;
-    Object.keys(DARK).forEach(k => {
-      if (dark) root.style.setProperty(k, DARK[k]);
-      else root.style.removeProperty(k);
-    });
-    root.style.colorScheme = dark ? 'dark' : 'light';
-  }
-
-  setupNav() {
-    const el = document.querySelector('[data-navlinks]');
-    this._mq = window.matchMedia('(min-width: 900px)');
-    this._onMq = () => { if (el) el.style.display = this._mq.matches ? 'flex' : 'none'; };
-    this._onMq();
-    this._mq.addEventListener('change', this._onMq);
-
-    const hero = document.querySelector('[data-herogrid]');
-    const hq = window.matchMedia('(max-width: 880px)');
-    const applyHero = () => { if (hero) hero.style.gridTemplateColumns = hq.matches ? 'minmax(0,1fr)' : 'minmax(0,1.55fr) minmax(0,1fr)'; };
-    applyHero();
-    hq.addEventListener('change', applyHero);
-  }
-
-  setupReveal() {
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const items = Array.from(document.querySelectorAll('[data-reveal]'));
-    if (!reduce) {
-      items.forEach(el => {
-        const r = el.getBoundingClientRect();
-        if (r.top > window.innerHeight * 0.92) {
-          el.style.opacity = '0';
-          el.style.transform = 'translateY(22px)';
-          el.style.transition = 'opacity .75s ease, transform .75s cubic-bezier(.2,.7,.3,1)';
-        }
-      });
-    }
-    const show = el => {
-      el.style.opacity = '1';
-      el.style.transform = 'none';
-      if (el.hasAttribute('data-reveal')) el.setAttribute('data-reveal', 'done');
-    };
-    const runCounters = scope => {
-      scope.querySelectorAll('[data-count]').forEach(n => {
-        if (n.dataset.done) return;
-        n.dataset.done = '1';
-        const to = parseFloat(n.getAttribute('data-count'));
-        const suffix = n.getAttribute('data-suffix') || '';
-        if (reduce) { n.textContent = to + suffix; return; }
-        const dur = 1100, t0 = performance.now();
-        const tick = now => {
-          const p = Math.min(1, (now - t0) / dur);
-          const e = 1 - Math.pow(1 - p, 3);
-          n.textContent = Math.round(to * e) + suffix;
-          if (p < 1) requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
-      });
-      scope.querySelectorAll('[data-bar]').forEach(b => {
-        if (b.dataset.done) return;
-        b.dataset.done = '1';
-        requestAnimationFrame(() => { b.style.width = b.getAttribute('data-bar') + '%'; });
-      });
-    };
-
-    this._io = new IntersectionObserver((entries) => {
-      entries.forEach(en => {
-        if (!en.isIntersecting) return;
-        show(en.target);
-        runCounters(en.target);
-        this._io.unobserve(en.target);
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-
-    items.forEach(el => this._io.observe(el));
-    document.querySelectorAll('[data-count],[data-bar]').forEach(n => {
-      if (!n.closest('[data-reveal]')) this._io.observe(n.parentElement || n);
-    });
-    runCounters(document.querySelector('#top') || document);
-  }
-
-  toggleTheme = () => this.setState(s => {
-    const dark = !s.dark;
-    try { localStorage.setItem('sd-portfolio-theme', dark ? 'dark' : 'light'); } catch (e) {}
-    return { dark };
-  });
-
-  toggleRole(i) {
-    this.setState(s => ({ open: Object.assign({}, s.open, { [i]: !s.open[i] }) }));
-  }
-
-  renderVals() {
-    const st = STAGES[this.state.stage] || STAGES[0];
-    const vals = {
-      themeGlyph: this.state.dark ? '☾' : '☀',
-      toggleTheme: this.toggleTheme,
-      stageName: st[0],
-      stageNote: st[1]
-    };
-    for (let i = 0; i < 4; i++) {
-      vals['open' + i] = !!this.state.open[i];
-      vals['toggle' + i] = () => this.toggleRole(i);
-    }
-    for (let i = 0; i < 8; i++) {
-      vals['hover' + i] = () => this.setState({ stage: i });
-    }
-    return vals;
-  }
-}
-
-</script>
+<script src="js/script.js"></script>
 </body>
 </html>
