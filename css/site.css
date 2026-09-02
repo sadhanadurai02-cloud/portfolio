@@ -5,3 +5,11 @@
 @media (max-width: 480px) {
   nav { flex-wrap: wrap; row-gap: 6px; }
 }
+
+/* Keep "I sell! Here's the" on one line at typical desktop/tablet widths;
+   on narrow phones the nowrap would push the hero font past the viewport,
+   so let it wrap there instead. */
+[data-hero-line1] { white-space: nowrap; }
+@media (max-width: 560px) {
+  [data-hero-line1] { white-space: normal; }
+}
