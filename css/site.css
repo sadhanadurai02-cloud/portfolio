@@ -13,3 +13,12 @@
 @media (max-width: 560px) {
   [data-hero-line1] { white-space: normal; }
 }
+
+/* The outbound-sequence rows (day / channel / description) use a fixed
+   78px+132px column grid that only works with real room to spare; below
+   that it squeezes the description into a one-word-per-line sliver and
+   the row balloons in height. Stack the columns instead on narrow screens. */
+[data-seq-row] { grid-template-columns: 78px 132px 1fr; }
+@media (max-width: 640px) {
+  [data-seq-row] { grid-template-columns: 1fr; row-gap: 6px; }
+}
